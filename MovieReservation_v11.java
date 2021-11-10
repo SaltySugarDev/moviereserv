@@ -108,8 +108,7 @@ public class MovieReservation_v11 {
 	
 	
 	public void AdminRef() {
-		rn = 'A';
-		
+		rn = 'A';		
 		System.out.println();
 		rn = 'A';
 		System.out.print("   열 ");
@@ -119,18 +118,14 @@ public class MovieReservation_v11 {
 		for(int j=9; j<12; j++) {			
 			System.out.print((col+j+1)+"  ");			
 		}
-		System.out.println();
-		
-		
-		
+		System.out.println();		
 		
 		for(int i=0; i<8; i++) {
 			System.out.println(rn + "행 ");;
 			col = 1;
 			rn++;
 			for(int j=0; j<12; j++) {
-				System.out.println((col+j) + seat[i][j] + " ");
-				
+				System.out.println((col+j) + seat[i][j] + " ");				
 			}			
 			System.out.println();
 		}
@@ -140,8 +135,7 @@ public class MovieReservation_v11 {
 	public void Reference1() {
 		System.out.println();
 		rn = 'A'; 
-		col = 0;
-		
+		col = 0;		
 		System.out.print("   열 ");
 		for(int j=0; j<9; j++) {			
 			System.out.print((col+j+1)+"   ");			
@@ -153,8 +147,7 @@ public class MovieReservation_v11 {
 			
 		for(int i=0; i<8; i++) {
 			System.out.print(rn + "행  ");		
-			rn++;			
-			
+			rn++;						
 			for(int j=0; j<12; j++) {
 				q = seat[i][j].equals("____")?" □ ":" ■ ";
 				System.out.print(q + " ");				
@@ -171,8 +164,7 @@ public class MovieReservation_v11 {
 			confirm = true;
 			System.out.print("예약자 성함을 입력해 주세요 : ");
 			Scanner scan = new Scanner(System.in);
-			name = scan.nextLine();
-			//System.out.println("예약자 성함을 확인해주세요 : " + name);
+			name = scan.nextLine();		
 			if(name == "") {
 				System.out.println("잘못 입력하셨습니다.");
 			}
@@ -180,8 +172,7 @@ public class MovieReservation_v11 {
 				System.out.print(name+"님이 맞으면 Y, 틀리면 X : ");
 				con_char = scan.next();
 				confirm = (con_char.equals("Y") || con_char.equals("y"))?false:true;					
-			}
-							 
+			}							 
 		}while(confirm);
 		
 		do {
@@ -192,8 +183,7 @@ public class MovieReservation_v11 {
 				row = scan.next();
 			}catch(Exception e) {
 				System.out.println("A~H만 입력하세요");
-			}
-			
+			}			
 			if(row.equals("A")||row.equals("a")){
 				row_int = 0;
 				confirm = false;				
@@ -302,13 +292,8 @@ public class MovieReservation_v11 {
 			movie.Interface();
 			if(movie.system == 4)
 				break;
-		}
-		
-	}
-	
-	
-	
-	
+		}		
+	}	
 }
 
 
